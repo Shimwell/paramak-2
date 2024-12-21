@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Python API reference &#8212; Paramak 0.1.dev1+g6dffc2a documentation</title>
+    <title>Python API reference &#8212; Paramak 0.1.dev1+gd850829 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=4361a4e5"></script>
+    <script src="_static/documentation_options.js?v=a67faa4d"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/sphinxcadquerystatic/three.js"></script>
@@ -67,7 +67,7 @@
     <link rel="prev" title="Spherical Tokamak" href="examples_spherical_tokamak.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="0.1.dev1+g6dffc2a" />
+  <meta name="docsearch:version" content="0.1.dev1+gd850829" />
   </head>
   
   
@@ -399,8 +399,11 @@
 <span class="sig-prename descclassname"><span class="pre">paramak.</span></span><span class="sig-name descname"><span class="pre">tokamak</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radial_build</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vertical_build</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangularity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.55</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation_angle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">180.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_cut_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_intersect_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/paramak/assemblies/tokamak.html#tokamak"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#paramak.tokamak" title="Link to this definition">#</a></dt>
 <dd><p>Creates a tokamak fusion reactor from a radial and vertical build.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Assembly</span></code></span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
 <li><p><strong>radial_build</strong> – sequence of tuples containing the radial build of the
 reactor. Each tuple should contain a LayerType and a float</p></li>
 <li><p><strong>vertical_build</strong> – sequence of tuples containing the vertical build of the
@@ -415,11 +418,11 @@ Each dictionary entry should be a key that matches the assembly part name
 representing the RGB or RGBA values.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A CadQuery Assembly object representing the tokamak fusion reactor.</p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A CadQuery Assembly object representing the tokamak fusion reactor.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>CadQuery.Assembly</p>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>CadQuery.Assembly</p>
 </dd>
 </dl>
 </dd></dl>
@@ -429,8 +432,11 @@ representing the RGB or RGBA values.</p></li>
 <span class="sig-prename descclassname"><span class="pre">paramak.</span></span><span class="sig-name descname"><span class="pre">tokamak_from_plasma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radial_build</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elongation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangularity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.55</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation_angle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">180.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_cut_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_intersect_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/paramak/assemblies/tokamak.html#tokamak_from_plasma"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#paramak.tokamak_from_plasma" title="Link to this definition">#</a></dt>
 <dd><p>Creates a tokamak fusion reactor from a radial build and plasma parameters.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Assembly</span></code></span></p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
 <li><p><strong>radial_build</strong> – sequence of tuples containing the radial build of the
 reactor. Each tuple should contain a LayerType and a float</p></li>
 <li><p><strong>elongation</strong> – The elongation of the plasma. Defaults to 2.0.</p></li>
@@ -444,11 +450,11 @@ Each dictionary entry should be a key that matches the assembly part name
 representing the RGB or RGBA values.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A CadQuery Assembly object representing the tokamak fusion reactor.</p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A CadQuery Assembly object representing the tokamak fusion reactor.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>CadQuery.Assembly</p>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>CadQuery.Assembly</p>
 </dd>
 </dl>
 </dd></dl>
@@ -457,26 +463,30 @@ representing the RGB or RGBA values.</p></li>
 <dt class="sig sig-object py" id="paramak.spherical_tokamak">
 <span class="sig-prename descclassname"><span class="pre">paramak.</span></span><span class="sig-name descname"><span class="pre">spherical_tokamak</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radial_build</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vertical_build</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangularity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.55</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation_angle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">180.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_cut_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_intersect_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/paramak/assemblies/spherical_tokamak.html#spherical_tokamak"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#paramak.spherical_tokamak" title="Link to this definition">#</a></dt>
 <dd><p>Creates a spherical tokamak fusion reactor from a radial build and vertical build.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>radial_build</strong> – sequence of tuples containing the radial build of the
-reactor. Each tuple should contain a LayerType and a float</p></li>
-<li><p><strong>elongation</strong> (<em>float</em><em>, </em><em>optional</em>) – _description_. Defaults to 2.0.</p></li>
-<li><p><strong>triangularity</strong> (<em>float</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.55.</p></li>
-<li><p><strong>rotation_angle</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – _description_. Defaults to 180.0.</p></li>
-<li><p><strong>extra_cut_shapes</strong> (<em>Sequence</em><em>, </em><em>optional</em>) – _description_. Defaults to [].</p></li>
-<li><p><strong>colors</strong> (<em>dict</em><em>, </em><em>optional</em>) – the colors to assign to the assembly parts. Defaults to {}.
-Each dictionary entry should be a key that matches the assembly part name
+<p>Args:
+:rtype: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Assembly</span></code></span></p>
+<blockquote>
+<div><dl class="simple">
+<dt>radial_build: sequence of tuples containing the radial build of the</dt><dd><p>reactor. Each tuple should contain a LayerType and a float</p>
+</dd>
+</dl>
+<p>elongation (float, optional): _description_. Defaults to 2.0.
+triangularity (float, optional): _description_. Defaults to 0.55.
+rotation_angle (Optional[str], optional): _description_. Defaults to 180.0.
+extra_cut_shapes (Sequence, optional): _description_. Defaults to [].
+colors (dict, optional): the colors to assign to the assembly parts. Defaults to {}.</p>
+<blockquote>
+<div><p>Each dictionary entry should be a key that matches the assembly part name
 (e.g. ‘plasma’, or ‘layer_1’) and a tuple of 3 or 4 floats between 0 and 1
-representing the RGB or RGBA values.</p></li>
-</ul>
+representing the RGB or RGBA values.</p>
+</div></blockquote>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>_description_</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>_description_</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>_type_</p>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>_type_</p>
 </dd>
 </dl>
 </dd></dl>
@@ -485,26 +495,30 @@ representing the RGB or RGBA values.</p></li>
 <dt class="sig sig-object py" id="paramak.spherical_tokamak_from_plasma">
 <span class="sig-prename descclassname"><span class="pre">paramak.</span></span><span class="sig-name descname"><span class="pre">spherical_tokamak_from_plasma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radial_build</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elongation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangularity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.55</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation_angle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">180.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_cut_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_intersect_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/paramak/assemblies/spherical_tokamak.html#spherical_tokamak_from_plasma"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#paramak.spherical_tokamak_from_plasma" title="Link to this definition">#</a></dt>
 <dd><p>Creates a spherical tokamak fusion reactor from a radial build and plasma parameters.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>radial_build</strong> – sequence of tuples containing the radial build of the
-reactor. Each tuple should contain a LayerType and a float</p></li>
-<li><p><strong>elongation</strong> (<em>float</em><em>, </em><em>optional</em>) – _description_. Defaults to 2.0.</p></li>
-<li><p><strong>triangularity</strong> (<em>float</em><em>, </em><em>optional</em>) – _description_. Defaults to 0.55.</p></li>
-<li><p><strong>rotation_angle</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – _description_. Defaults to 180.0.</p></li>
-<li><p><strong>extra_cut_shapes</strong> (<em>Sequence</em><em>, </em><em>optional</em>) – _description_. Defaults to [].</p></li>
-<li><p><strong>colors</strong> (<em>dict</em><em>, </em><em>optional</em>) – the colors to assign to the assembly parts. Defaults to {}.
-Each dictionary entry should be a key that matches the assembly part name
+<p>Args:
+:rtype: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Assembly</span></code></span></p>
+<blockquote>
+<div><dl class="simple">
+<dt>radial_build: sequence of tuples containing the radial build of the</dt><dd><p>reactor. Each tuple should contain a LayerType and a float</p>
+</dd>
+</dl>
+<p>elongation (float, optional): _description_. Defaults to 2.0.
+triangularity (float, optional): _description_. Defaults to 0.55.
+rotation_angle (Optional[str], optional): _description_. Defaults to 180.0.
+extra_cut_shapes (Sequence, optional): _description_. Defaults to [].
+colors (dict, optional): the colors to assign to the assembly parts. Defaults to {}.</p>
+<blockquote>
+<div><p>Each dictionary entry should be a key that matches the assembly part name
 (e.g. ‘plasma’, or ‘layer_1’) and a tuple of 3 or 4 floats between 0 and 1
-representing the RGB or RGBA values.</p></li>
-</ul>
+representing the RGB or RGBA values.</p>
+</div></blockquote>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>_description_</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>_description_</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>_type_</p>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>_type_</p>
 </dd>
 </dl>
 </dd></dl>
