@@ -28,7 +28,6 @@ jobs:
       - uses: mamba-org/setup-micromamba@v1
         with:
           micromamba-version: '1.5.8-0' # any version from https://github.com/mamba-org/micromamba-releases
-          environment-file: environment_dev.yml
           init-shell: bash
           cache-environment: true
           post-cleanup: 'all'
