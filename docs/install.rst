@@ -1,7 +1,7 @@
 Install
 =======
 
-Paramak is distributed via `PyPI <https://pypi.org/project/paramak/>`_ and can be installed using pip.
+Paramak is distributed via `PyPI <https://pypi.ohkrg/project/paramak/>`_ and can be installed using pip.
 
 .. code-block:: bash
 
