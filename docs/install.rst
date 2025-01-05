@@ -1,11 +1,20 @@
 Install
 =======
 
+You might wish to create a virtual environment to install Paramak into. This can be done using the venv module in Python. For more information, see the `official Python documentation <https://docs.python.org/3/library/venv.html>`_.
+
+.. code-block:: bash
+
+   python -m venv paramak-venv
+   source paramak-venv/bin/activate
+
+
 Paramak is distributed via `PyPI <https://pypi.org/project/paramak/>`_ and can be installed using pip.
 
 .. code-block:: bash
 
-   pip install paramak
+   python -m pip install paramak
+
 
 
 .. Prerequisites
@@ -31,7 +40,7 @@ Paramak is distributed via `PyPI <https://pypi.org/project/paramak/>`_ and can b
 
 .. .. code-block:: bash
 
-..    mamba create --name paramak_env python=3.11
+..    mamba create --name paramak_env python=3.12
 
 
 .. Then activate the new environment.
@@ -56,7 +65,7 @@ Paramak is distributed via `PyPI <https://pypi.org/project/paramak/>`_ and can b
 
 .. .. code-block:: bash
 
-..    conda create --name paramak_env python=3.11
+..    conda create --name paramak_env python=3.12
 
 
 .. Then activate the new environment.
@@ -78,11 +87,12 @@ Paramak is distributed via `PyPI <https://pypi.org/project/paramak/>`_ and can b
 Developer Installation
 ----------------------
 
-If you want to contribute to the paramak or then you might want to install the
-package in a more dynamic manner so that your changes to the code are readily available.
+If you want to contribute to Paramak or then you might want to install the
+package in a more dynamic manner so that your changes to the code are readily
+available.
 
-Download and install MiniConda, create a new python environment and activate the
-environment as covered in the installation procedure above.
+Create a new Venv, Conda or Mamba virtual environment and activate the
+environment as covered in the installation procedure above
 
 Then clone the repository
 
