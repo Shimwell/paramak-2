@@ -37,19 +37,20 @@ jobs:
 
       - name: install dependencies
         shell: bash -el {0}
-        run: |
-          python -m pip install .[docs]
-
+        run: python -m pip install .[docs]
+      
       - name: Sphinx build tagged version
         if: startsWith(github.ref, 'refs/tags/')
+        shell: bash -el {0}
         run: |
           sphinx-build docs _build/${{ github.ref_name }}
           rm -rf _build/stable
           mkdir -p _build/stable
           sphinx-build linkcheck docs _build/stable
-
+        
       - name: Sphinx build dev version
         if: (github.event_name == 'push' || github.event_name == 'pull_request') && !startsWith(github.ref, 'refs/tags/')
+        shell: bash -el {0}
         run: |
           rm -rf _build/dev
           mkdir -p _build/dev
