@@ -1,32 +1,31 @@
 name: documentation release
 
 on:
-    pull_request:
-        branches:
-            - main
-    push:
-        branches:
-            - main
-        tags:
-            - '*'
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+    tags:
+      - '*'
 
 
 permissions:
   contents: write
 
 jobs:
-  testing:
+  test:
     name: Documentation
     runs-on: ubuntu-latest
     steps:
-      - name: checkout actions
-        uses: actions/checkout@v4
-
       - name: Install system packages
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y libgl1 libglx-mesa0 libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev libosmesa6 libosmesa6-dev libgles2-mesa-dev libarchive-dev libpangocairo-1.0-0 libopenblas-dev
+          sudo apt-get install -y libgl1 libglx-mesa0 libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev libosmesa6 libosmesa6-dev libgles2-mesa-dev libarchive-dev libpangocairo-1.0-0
 
+      - name: checkout actions
+        uses: actions/checkout@v4
 
       - uses: mamba-org/setup-micromamba@v1
         with:
@@ -36,14 +35,14 @@ jobs:
           cache-environment: true
           post-cleanup: 'all'
 
-      - name: install package
+      - name: install dependencies
+        shell: bash -el {0}
         run: |
-          pip install --upgrade pip
-          pip install .[docs]
+          python -m pip install .[docs]
+
       - name: Check URL links in the docs
-        run: |
-          make linkcheck
-          sphinx-build -M linkcheck . _build
+        run: sphinx-build -M linkcheck . _build
+
       - name: Sphinx build tagged version
         if: startsWith(github.ref, 'refs/tags/')
         run: |
@@ -51,12 +50,14 @@ jobs:
           rm -rf _build/stable
           mkdir -p _build/stable
           sphinx-build docs _build/stable
+
       - name: Sphinx build dev version
         if: (github.event_name == 'push' || github.event_name == 'pull_request') && !startsWith(github.ref, 'refs/tags/')
         run: |
           rm -rf _build/dev
           mkdir -p _build/dev
           sphinx-build docs _build/dev
+
       - name: Deploy docs to GitHub Pages
         if: github.event_name == 'push' || startsWith(github.ref, 'refs/tags/')
         uses: peaceiris/actions-gh-pages@v4

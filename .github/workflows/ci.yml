@@ -33,11 +33,11 @@ jobs:
           cache-environment: true
           post-cleanup: 'all'
 
-      - name: install dependencies run tests
+      - name: install dependencies
         shell: bash -el {0}
         run: |
           python -m pip install .[tests]
-        
+
       - name: Test with pytest
         shell: bash -el {0}
         run: |
