@@ -31,10 +31,13 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: install dependencies
-        run: python -m pip install .[tests]
+        run: |
+          python -m pip install .
+          python -c "import paramak"
 
       - name: Test with pytest
         run: |
+          python -m pip install .[tests]
           pytest -v
           python examples/plasma.py
           python examples/spherical_tokamak_from_plasma_minimal.py
