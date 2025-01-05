@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools >= 69.5.1", "setuptools_scm[toml]>=8.1.0"]
+requires = ["setuptools >= 72.1.0", "setuptools_scm[toml]>=8.1.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -47,7 +47,7 @@ docs = [
     "pydata-sphinx-theme",
     "cadquery",
     "ipython",
-    "sphinx_design"
+    "sphinx_design",
 ]
 
 [tool.black]
