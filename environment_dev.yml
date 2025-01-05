@@ -1,12 +1,11 @@
 name: paramak-dev-environment
 
 dependencies:
-  - openmc=0.15.0=dagmc*
-  - ocp=7.7.2.1
-  - cadquery=2.4.0
+  - openmc<=0.15.0=dagmc*
+  - cadquery<=2.5.2
   - gmsh
   - python-gmsh
-  - numpy<=1.26.4
+  - numpy
   - pytest
   - pip
   - mpmath
