@@ -41,6 +41,7 @@ jobs:
           python -m pip install .[docs]
 
       - name: Check URL links in the docs
+        shell: bash -el {0}
         run: sphinx-build -M linkcheck . _build
 
       - name: Sphinx build tagged version
