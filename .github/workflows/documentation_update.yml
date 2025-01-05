@@ -46,7 +46,7 @@ jobs:
           sphinx-build docs _build/${{ github.ref_name }}
           rm -rf _build/stable
           mkdir -p _build/stable
-          sphinx-build linkcheck docs _build/stable
+          sphinx-build -b linkcheck docs _build/stable
         
       - name: Sphinx build dev version
         if: (github.event_name == 'push' || github.event_name == 'pull_request') && !startsWith(github.ref, 'refs/tags/')
@@ -54,7 +54,7 @@ jobs:
         run: |
           rm -rf _build/dev
           mkdir -p _build/dev
-          sphinx-build linkcheck docs _build/dev
+          sphinx-build -b linkcheck docs _build/dev
 
       - name: Deploy docs to GitHub Pages
         if: github.event_name == 'push' || startsWith(github.ref, 'refs/tags/')
