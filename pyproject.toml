@@ -19,8 +19,8 @@ license = {file = "LICENSE.txt"}
 requires-python = ">=3.8"
 keywords = ["python", "geometry", "reactor", "model", "cad", "fusion", "parametric", "dagmc", "openmc"]
 dependencies = [
-    "cadquery",
-    "numpy<=1.26.4",
+    "cadquery>=2.5.2",
+    "numpy",
     "mpmath",
     "sympy",
     "scipy",
