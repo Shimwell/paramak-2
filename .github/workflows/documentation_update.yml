@@ -40,8 +40,8 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install .[docs]
-      - name: Check URL links
-        run: sphinx linkcheck
+      - name: Check URL links in the docs
+        run: make linkcheck
       - name: Sphinx build tagged version
         if: startsWith(github.ref, 'refs/tags/')
         run: |
