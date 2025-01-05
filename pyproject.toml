@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools >= 72.1.0", "setuptools_scm[toml]>=8.1.0"]
+requires = ["setuptools>=72.1.0", "setuptools_scm[toml]>=8.1.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -48,6 +48,7 @@ docs = [
     "cadquery",
     "ipython",
     "sphinx_design",
+    "setuptools",
 ]
 
 [tool.black]
