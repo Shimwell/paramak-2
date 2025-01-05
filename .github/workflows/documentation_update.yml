@@ -25,7 +25,7 @@ jobs:
       - name: Install system packages
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y libgl1 libglx-mesa0 libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev libosmesa6 libosmesa6-dev libgles2-mesa-dev libarchive-dev libpangocairo-1.0-0
+          sudo apt-get install -y libgl1 libglx-mesa0 libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev libosmesa6 libosmesa6-dev libgles2-mesa-dev libarchive-dev libpangocairo-1.0-0 libopenblas-dev
 
 
       - uses: mamba-org/setup-micromamba@v1
@@ -41,7 +41,9 @@ jobs:
           pip install --upgrade pip
           pip install .[docs]
       - name: Check URL links in the docs
-        run: make linkcheck
+        run: |
+          make linkcheck
+          sphinx-build -M linkcheck . _build
       - name: Sphinx build tagged version
         if: startsWith(github.ref, 'refs/tags/')
         run: |
