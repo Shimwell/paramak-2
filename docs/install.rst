@@ -1,87 +1,64 @@
 Install
 =======
 
-You might wish to create a virtual environment to install Paramak into. This can be done using the venv module in Python. For more information, see the `official Python documentation <https://docs.python.org/3/library/venv.html>`_.
 
-.. code-block:: bash
-
-   python -m venv paramak-venv
-   source paramak-venv/bin/activate
+Paramak is distributed via `PyPI <https://pypi.org/project/paramak/>`_ and `Conda Forge <https://anaconda.org/conda-forge/paramak>`_ can be installed using pip or Conda / Mamba.
 
 
-Paramak is distributed via `PyPI <https://pypi.org/project/paramak/>`_ and can be installed using pip.
+Install from PyPI using pip
 
 .. code-block:: bash
 
    python -m pip install paramak
 
+Install from Conda Forge using Conda or Mamba
 
+.. code-block:: bash
 
-.. Prerequisites
-.. -------------
-
-.. To use of Paramak you will need Python 3 installed using Miniconda or Anaconda, or Miniforge
-
-.. * `Miniforge <https://github.com/conda-forge/miniforge>`_ recommended as it includes Mamba 
-.. * `Miniconda <https://docs.conda.io/en/latest/miniconda.html>`_
-.. * `Anaconda <https://www.anaconda.com/>`_
+   mamba install -c conda-forge paramak
+   conda install -c conda-forge paramak
 
 
 
-.. Once you have a version of Mamba or Conda installed then proceed with the Paramak specific steps.
+Prerequisites
+-------------
 
+It is recommended to create a virtual environment to install Paramak into.
 
-.. Install (mamba)
-.. ---------------
+This can be done using the `venv module <https://docs.python.org/3/library/venv.html>`_ in or a Conda or Mamba environment.
 
-.. This is the recommended method as it installs all the dependencies and Mamba is faster and requires less RAM than the pure Conda method.
+To create a virtual environment using the venv module
 
-.. Create a new environment (with your preferred python version).
+.. code-block:: bash
 
-.. .. code-block:: bash
+   sudo apt-get update
+   sudo apt-get install python3-virtualenv
+   python -m venv paramak-venv
+   source paramak-venv/bin/activate
 
-..    mamba create --name paramak_env python=3.12
+To create a virtual environment using Conda or Mamba
 
+First install Miniconda or Anaconda, or Miniforge
 
-.. Then activate the new environment.
+* `Miniforge <https://github.com/conda-forge/miniforge>`_ recommended as it includes Mamba 
+* `Miniconda <https://docs.conda.io/en/latest/miniconda.html>`_
+* `Anaconda <https://www.anaconda.com/>`_
 
-.. .. code-block:: bash
+Once you have a version of Mamba or Conda installed then proceed with creating the virtual environment.
 
-..    mamba activate paramak_env
+Create a new environment with mamba and your preferred python version then activate the new environment.
 
+.. code-block:: bash
 
-.. Then install the Paramak.
+   mamba create --name paramak_env python=3.12
+   mamba activate paramak_env
 
-.. .. code-block:: bash
+Or with Conda
 
-..    mamba install -c conda-forge paramak
+.. code-block:: bash
 
-.. Now you should be ready to import paramak from your new python environment.
-
-.. Install (conda)
-.. ---------------
-
-.. Create a new environment (with your preferred python version).
-
-.. .. code-block:: bash
-
-..    conda create --name paramak_env python=3.12
-
-
-.. Then activate the new environment.
-
-.. .. code-block:: bash
-
-..    conda activate paramak_env
-
-.. Then install the Paramak.
-
-.. .. code-block:: bash
-
-..    mamba install -c conda-forge paramak
-
-.. Now you should be ready to import paramak from your new python environment.
-
+   conda create --name paramak_env python=3.12
+   conda activate paramak_env
 
 
 Developer Installation
@@ -106,4 +83,4 @@ package and the dependencies using pip with e -e (developer option).
 .. code-block:: bash
 
    cd paramak
-   pip install -e .
+   python -m pip install -e .
