@@ -60,11 +60,14 @@ def create_wire_workplane_from_points(points, plane, origin=(0, 0, 0), obj=None)
 
     workplane = Workplane(plane, origin=origin, obj=obj)  # offset=extrusion_offset
 
+
+    all_straight = all(entry[-1] == "straight" for entry in points)
     all_spline = all(entry[-1] == "spline" for entry in points)
 
-    # TODO add check for all straights and do polyline
-
-    if all_spline:
+    if all_straight:
+        entry_values = [entry[:2] for entry in points]
+        result = workplane.polyline(entry_values).close()
+    elif all_spline:
         entry_values = [entry[:2] for entry in points[:-1]]
         result = workplane.spline(
             entry_values, makeWire=True, tol=1e-1, periodic=True
