@@ -65,7 +65,7 @@ def create_wire_workplane_from_points(points, plane, origin=(0, 0, 0), obj=None)
     all_spline = all(entry[-1] == "spline" for entry in points)
 
     if all_straight:
-        entry_values = [entry[:2] for entry in points]
+        entry_values = [entry[:2] for entry in points[:-1]]
         result = workplane.polyline(entry_values).close()
     elif all_spline:
         entry_values = [entry[:2] for entry in points[:-1]]
